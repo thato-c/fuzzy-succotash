@@ -253,98 +253,74 @@ public class CalculatorGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void processInformation(String value){
+        String currentText = tfOutput.getText();
+        String newText = currentText + value;
+        tfOutput.setText(newText);
+    }
+    
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         tfOutput.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOneActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "1";
-        tfOutput.setText(newText);
+        processInformation("1");
     }//GEN-LAST:event_btnOneActionPerformed
 
     private void btnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTwoActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "2";
-        tfOutput.setText(newText);
+        processInformation("2");
     }//GEN-LAST:event_btnTwoActionPerformed
 
     private void btnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThreeActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "3";
-        tfOutput.setText(newText);
+        processInformation("3");
     }//GEN-LAST:event_btnThreeActionPerformed
 
     private void btnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFourActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "4";
-        tfOutput.setText(newText);
+        processInformation("4");
     }//GEN-LAST:event_btnFourActionPerformed
 
     private void btnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiveActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "5";
-        tfOutput.setText(newText);
+        processInformation("5");
     }//GEN-LAST:event_btnFiveActionPerformed
 
     private void btnSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSixActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "6";
-        tfOutput.setText(newText);
+        processInformation("6");
     }//GEN-LAST:event_btnSixActionPerformed
 
     private void btnSevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSevenActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "7";
-        tfOutput.setText(newText);
+        processInformation("7");
     }//GEN-LAST:event_btnSevenActionPerformed
 
     private void btnEightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEightActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "8";
-        tfOutput.setText(newText);
+        processInformation("8");
     }//GEN-LAST:event_btnEightActionPerformed
 
     private void btnNineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNineActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "9";
-        tfOutput.setText(newText);
+        processInformation("9");
     }//GEN-LAST:event_btnNineActionPerformed
 
     private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZeroActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "0";
-        tfOutput.setText(newText);
+        processInformation("0");
     }//GEN-LAST:event_btnZeroActionPerformed
 
     private void btnPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPointActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + ".";
-        tfOutput.setText(newText);
+        processInformation(".");
     }//GEN-LAST:event_btnPointActionPerformed
 
     private void btnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivideActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "/";
-        tfOutput.setText(newText);
+        processInformation("/");
     }//GEN-LAST:event_btnDivideActionPerformed
 
     private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "*";
-        tfOutput.setText(newText);
+        processInformation("*");
     }//GEN-LAST:event_btnMultiplyActionPerformed
 
     private void btnSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubtractActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "-";
-        tfOutput.setText(newText);
+        processInformation("-");
     }//GEN-LAST:event_btnSubtractActionPerformed
 
     private void btnAAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAAddActionPerformed
-        String currentText = tfOutput.getText();
-        String newText = currentText + "+";
-        tfOutput.setText(newText);
+        processInformation("+");
     }//GEN-LAST:event_btnAAddActionPerformed
 
     /**
