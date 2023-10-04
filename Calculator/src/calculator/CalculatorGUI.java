@@ -27,7 +27,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         tfOutput = new javax.swing.JTextField();
-        btnAAdd = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         btnOne = new javax.swing.JButton();
         btnTwo = new javax.swing.JButton();
         btnThree = new javax.swing.JButton();
@@ -43,7 +43,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         btnPoint = new javax.swing.JButton();
         btnDivide = new javax.swing.JButton();
         btnZero = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        btnCompute = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 102, 255));
@@ -52,10 +52,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
         tfOutput.setEditable(false);
         tfOutput.setToolTipText("");
 
-        btnAAdd.setText("+");
-        btnAAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setText("+");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAAddActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
@@ -164,7 +164,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton17.setText("=");
+        btnCompute.setText("=");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,7 +177,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                         .addComponent(tfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnAAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnOne, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -211,7 +211,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                                 .addComponent(btnPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnZero, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnCompute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
@@ -223,7 +223,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addComponent(tfOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAAdd)
+                    .addComponent(btnAdd)
                     .addComponent(btnOne)
                     .addComponent(btnTwo)
                     .addComponent(btnThree))
@@ -246,7 +246,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     .addComponent(btnZero)
                     .addComponent(btnClear))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton17)
+                .addComponent(btnCompute)
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
@@ -319,9 +319,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
         processInformation("-");
     }//GEN-LAST:event_btnSubtractActionPerformed
 
-    private void btnAAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAAddActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         processInformation("+");
-    }//GEN-LAST:event_btnAAddActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,8 +359,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAAdd;
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnCompute;
     private javax.swing.JButton btnDivide;
     private javax.swing.JButton btnEight;
     private javax.swing.JButton btnFive;
@@ -375,7 +376,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnThree;
     private javax.swing.JButton btnTwo;
     private javax.swing.JButton btnZero;
-    private javax.swing.JButton jButton17;
     private javax.swing.JTextField tfOutput;
     // End of variables declaration//GEN-END:variables
 }
