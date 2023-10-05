@@ -261,124 +261,93 @@ public class CalculatorGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void processInformation(String value){
-        String currentText = tfOutput.getText();
-        String newText = currentText + value;
-        tfOutput.setText(newText);
-    }
-    
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         tfOutput.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOneActionPerformed
-        processInformation("1");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "1";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnOneActionPerformed
 
     private void btnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTwoActionPerformed
-        processInformation("2");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "2";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnTwoActionPerformed
 
     private void btnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThreeActionPerformed
-        processInformation("3");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "3";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnThreeActionPerformed
 
     private void btnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFourActionPerformed
-        processInformation("4");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "4";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnFourActionPerformed
 
     private void btnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiveActionPerformed
-        processInformation("5");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "5";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnFiveActionPerformed
 
     private void btnSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSixActionPerformed
-        processInformation("6");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "6";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnSixActionPerformed
 
     private void btnSevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSevenActionPerformed
-        processInformation("7");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "7";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnSevenActionPerformed
 
     private void btnEightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEightActionPerformed
-        processInformation("8");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "8";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnEightActionPerformed
 
     private void btnNineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNineActionPerformed
-        processInformation("9");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "9";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnNineActionPerformed
 
     private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZeroActionPerformed
-        processInformation("0");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "0";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnZeroActionPerformed
 
     private void btnPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPointActionPerformed
-        processInformation(".");
+        String currentText = tfOutput.getText();
+        String newText = currentText + ".";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnPointActionPerformed
 
     private void btnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivideActionPerformed
-        processInformation("/");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "/";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnDivideActionPerformed
 
     private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
-        processInformation("*");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "*";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnMultiplyActionPerformed
 
     private void btnSubtractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubtractActionPerformed
-        processInformation("-");
+        String currentText = tfOutput.getText();
+        String newText = currentText + "-";
+        tfOutput.setText(newText);
     }//GEN-LAST:event_btnSubtractActionPerformed
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        processInformation("+");
-    }//GEN-LAST:event_btnAddActionPerformed
-
-    private void btnComputeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputeActionPerformed
-        String expression = tfOutput.getText();
-        String currentNumber = "";
-        List<Double> numbers = new ArrayList<>();
-        List<String> operators = new ArrayList<>();
-        
-        for (int i = 0; i < expression.length(); i++){
-            char c = expression.charAt(i);
-            
-            // Check if the character is a digit
-            if (Character.isDigit(c)){
-                currentNumber += c;
-            }
-            
-            if (String.valueOf(c).equals(".")){
-                currentNumber += c;
-            }
-            
-            if (!Character.isDigit(c)){
-                char operator = c;
-                double number = Double.parseDouble(currentNumber);
-                numbers.add(number);
-            }
-                
-            var operation = String.valueOf(operator);
-            operators.add(operation);
-                
-            currentNumber = "";
-            }
-        }
-        
-        // Check if there's a number left after the loop
-        if (!currentNumber.isEmpty()){
-            double number = Double.parseDouble(currentNumber);
-            numbers.add(number);
-        }
-        
-        for (double number : numbers){
-            System.out.println("Parsed number: " + number);
-        }
-        
-        for (int i = 0; i < operators.size(); i++){
-            String operator = operators.get(i);
-            
-            System.out.println("Numbers surrounding operator: Left Hand " + numbers.get(i) + " Right Hand " + numbers.get(i + 1));
-            System.out.println("Operator at index " + i + ": " + operator);
-        }
-    }//GEN-LAST:event_btnComputeActionPerformed
 
     /**
      * @param args the command line arguments
