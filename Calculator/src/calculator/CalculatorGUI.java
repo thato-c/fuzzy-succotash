@@ -4,6 +4,9 @@
  */
 package calculator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author tchit
@@ -165,6 +168,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         btnCompute.setText("=");
+        btnCompute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComputeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -322,6 +330,55 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         processInformation("+");
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnComputeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputeActionPerformed
+        String expression = tfOutput.getText();
+        String currentNumber = "";
+        List<Double> numbers = new ArrayList<>();
+        List<String> operators = new ArrayList<>();
+        
+        for (int i = 0; i < expression.length(); i++){
+            char c = expression.charAt(i);
+            
+            // Check if the character is a digit
+            if (Character.isDigit(c)){
+                currentNumber += c;
+            }
+            
+            if (String.valueOf(c).equals(".")){
+                currentNumber += c;
+            }
+            
+            if (!Character.isDigit(c)){
+                char operator = c;
+                double number = Double.parseDouble(currentNumber);
+                numbers.add(number);
+            }
+                
+            var operation = String.valueOf(operator);
+            operators.add(operation);
+                
+            currentNumber = "";
+            }
+        }
+        
+        // Check if there's a number left after the loop
+        if (!currentNumber.isEmpty()){
+            double number = Double.parseDouble(currentNumber);
+            numbers.add(number);
+        }
+        
+        for (double number : numbers){
+            System.out.println("Parsed number: " + number);
+        }
+        
+        for (int i = 0; i < operators.size(); i++){
+            String operator = operators.get(i);
+            
+            System.out.println("Numbers surrounding operator: Left Hand " + numbers.get(i) + " Right Hand " + numbers.get(i + 1));
+            System.out.println("Operator at index " + i + ": " + operator);
+        }
+    }//GEN-LAST:event_btnComputeActionPerformed
 
     /**
      * @param args the command line arguments
