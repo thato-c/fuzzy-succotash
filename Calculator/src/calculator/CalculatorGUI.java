@@ -349,6 +349,13 @@ public class CalculatorGUI extends javax.swing.JFrame {
         tfOutput.setText(newText);
     }//GEN-LAST:event_btnSubtractActionPerformed
 
+
+    private void btnAAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAAddActionPerformed
+        String currentText = tfOutput.getText();
+        String newText = currentText + "+";
+        tfOutput.setText(newText);
+    }//GEN-LAST:event_btnAAddActionPerformed
+
     /**
      * @param args the command line arguments
      */
